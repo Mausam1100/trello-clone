@@ -32,17 +32,17 @@ function List() {
                 
                 <div className='md4:w-[50%] overflow-hidden'>
                     <div className={`md4:hidden list-slider flex w-full space-y-5 translate-x-[(-${(activeList - 1) * 100}%)]`} style={{transform: `translateX(-${(activeList - 1) * 100}%)`}}>
-                        <div className={`${isActive(1)} cursor-pointer min-w-full px-5 py-4 md4:w-[100%] md4:h-fit`} onClick={() => handleListClick(1)}>
+                        <div className={`list-active cursor-pointer min-w-full px-5 py-4 md4:w-[100%] md4:h-fit`} onClick={() => handleListClick(1)}>
                             <h2 className='font-medium'>Lists</h2>
                             <p>The different stages of a task. Start as simple as To Do, Doing or Done—or build a workflow custom fit to your team’s needs. There’s no wrong way to Trello.</p>
                         </div>
 
-                        <div className={`${isActive(1)} md4:inline-block min-w-full cursor-pointer px-5 py-4 md4:w-[100%] md4:h-fit`} onClick={() => handleListClick(2)}>
+                        <div className={`list-active md4:inline-block min-w-full cursor-pointer px-5 py-4 md4:w-[100%] md4:h-fit`} onClick={() => handleListClick(2)}>
                             <h2 className='font-medium'>Boards</h2>
                             <p>Trello boards keep tasks organized and work moving forward. In a glance, see everything from “things to do” to “aww yeah, we did it!”</p>
                         </div>
 
-                        <div className={`${isActive(1)} md4:inline-block min-w-full px-5 cursor-pointer py-4 md4:w-[100%] md4:h-fit`} onClick={() => handleListClick(3)}>
+                        <div className={`list-active md4:inline-block min-w-full px-5 cursor-pointer py-4 md4:w-[100%] md4:h-fit`} onClick={() => handleListClick(3)}>
                             <h2 className='font-medium'>Cards</h2>
                             <p>Cards represent tasks and ideas and hold all the information to get the job done. As you make progress, move cards across lists to show their status.</p>
                         </div>
