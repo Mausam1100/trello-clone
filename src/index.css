@@ -1,13 +1,203 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+    .custom-shape-divider-bottom-1725015801 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1725015801 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1725015801 .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    .hero {
+        background: rgb(82,67,170);
+        background: linear-gradient(90deg, rgba(82,67,170,1) 0%, rgba(237,80,180,1) 100%);
+    }
+
+    .set-width {
+        @apply max-w-[530px] md3:max-w-[695px] md4:max-w-[960px] m-auto md5:max-w-[1140px]
+    }
+
+    .list {
+        background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(178, 212, 255);
+        background-blend-mode: normal;
+        color: rgb(9, 30, 66);
+    }
+
+    .list-active {
+        @apply bg-white rounded-lg border-l-8 border-cyan-400 drop-shadow-xl
+    }
+
+    .list-inactive {
+        @apply bg-transparent rounded-none drop-shadow-none border-l-8 border-transparent
+    }
+
+    .list-button {
+        transition: all 250ms ease-out;
+    }
+
+    .list-button-active {
+        @apply w-14 h-2 bg-gray-500 
+    }
+
+    .list-button-inactive {
+        @apply w-2 h-2 bg-black
+    }
+
+    .image-slider, .list-slider {
+        transition: all 300ms ease-out;
+    }
+
+    .workdone1 {
+        background: rgb(255, 116, 82);
+    }
+    .workdone2 {
+        background: rgb(38, 132, 255);
+    }
+    .workdone3 {
+        background: rgb(87, 217, 163);
+    }
+    .workdone4 {
+        background: rgb(255, 196, 0);
+    }
+    .workdone5 {
+        background: rgb(0, 199, 229);
+    }
+    .workdone6 {
+        background: rgb(249, 156, 219);
+    }
+
+    .translateWorkflow {
+        transition: all 400ms ease-out;
+    }
+
+    .discover {
+        background: rgb(0,101,255);
+        background: linear-gradient(90deg, rgba(0,101,255,1) 0%, rgba(0,184,217,1) 100%);
+    }
+
+    .story {
+        background: rgb(230,252,255);
+        background: linear-gradient(0deg, rgba(230,252,255,1) 0%, rgba(255,255,255,1) 100%);
+    }
+
+    .storyPara {
+        background-image: url(./components/assets/story1.svg);
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+
+    .storyParaBottom {
+        background: rgb(101,84,192);
+        background: linear-gradient(90deg, rgba(101,84,192,1) 0%, rgba(249,156,219,1) 91%);
+    }
+
+    .price {
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(230,252,255,1) 100%);
+    }
+
+    .premium {
+        border: 2px solid rgb(0, 184, 217);
+    }
+
+    .premium-btn {
+        background-color: rgb(230, 252, 255);
+    }
+
+    @media screen and (max-width: 990px) {
+        .lastHero {
+            background: rgb(82,67,170);
+            background: linear-gradient(90deg, rgba(82,67,170,1) 0%, rgba(237,80,180,1) 100%);
+        }
+    }
+
+    @media screen and (min-width: 990px) {
+        .lastHero {
+            background: url(./components/assets/lasthero1.svg) left center / contain no-repeat scroll padding-box border-box, 
+                        url(./components/assets/lasthero2.svg) right center / contain no-repeat scroll padding-box border-box, 
+                        linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);;
+        }
+    }
+
+    .bottom-border{
+        border-bottom: 1px solid rgb(80, 95, 121);
+    }
+
+    .footer {
+        background-color: rgb(23, 43, 77);
+    }
+
+    option {
+        color: black;
+    }
+
+    .blueHover:hover {
+        color: rgb(0, 101, 255);
+    }
+
+    .darkBlueBgHover:hover, .darkBlueBgHover2:hover {
+        background-color: rgb(31, 77, 158);
+    }
+
+    .darkBlueBgHover2 {
+        transition: background-color linear 200ms;
+    }
+
+    .whiteHover:hover {
+        color: white;
+    }
+
+    .lightBgHover:hover {
+        background-color: hwb(217 82% 0%);
+    }
+
+    .lightBgHover, .priceBtnHover {
+        transition: background-color linear 200ms;
+    }
+
+    .darkBlueHover:hover {
+        color: rgb(28, 74, 154);
+        text-decoration-color: rgb(28, 74, 154);
+    }
+
+    .grayBgHover:hover {
+        background-color: #6b7280 ;
+    }
+
+    .priceBtnHover:hover {
+        background-color: rgb(222, 251, 255);
+    }
+
+    .whiteHover2:hover {
+        color: white;
+    } 
+
+    .whiteHover2:hover .playlogo {
+        padding-left: 4px;
+    }
+
+    .playlogo {
+        transition: padding-left linear 200ms;
+    }
+
+    .last-logo {
+        transition: all linear 100ms;
+    }
 }
